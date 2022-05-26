@@ -25,7 +25,6 @@ function EditCard() {
 
     const child = card.id ? (
         <FormCard 
-            deckName={deck.name}
             initialState={card}
             onSubmit={submitHandler}
             onDone={doneHandler}

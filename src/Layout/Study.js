@@ -70,10 +70,10 @@ console.log(deck)
                 <p>
                     "You need at least 3 cards to study. There are {deck.cards.length} cards in this deck."
                 </p>
-                <button className="btn btn-primary">
+                <Link to ={`/decks/${deck.id}/cards/new`} className="btn btn-primary">
                     <i className="bi bi-plus-lg pr-1"></i>
                     Add Cards
-                </button>
+                </Link>
             </div>
         )
 

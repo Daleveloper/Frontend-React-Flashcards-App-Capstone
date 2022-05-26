@@ -1,12 +1,29 @@
 import React, { useState } from "react";
 
 
-Function FromDeck(){
+function FormDeck({
+    initialState,
+    onSubmit,
+    onDone,
+    cancelButtonHandler="Cancel",
+}){
+    const [formData, setFormData] = useState(initialState)
 
 
 
+    const changeHandler = ({target:{name, value}}) => {
+        setFormData((prevState)=> ({
+            ...prevState,
+            [name]:value,
+        }))
+    }
 
-
+    function handleSubmit(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        onSubmit({ ...formData });
+        setFormData({ name: "", description: "" });
+    }
 
 
 return(
@@ -41,12 +58,12 @@ return(
                 Submit
             </button>
         </div>
-        <Link to={`/`}>
-            <button href="#" className="btn btn-danger" onClick={cancelHandler}>
-                <i className="bi bi-trash pr-1"></i>Cancel
+            <button href="#" className="btn btn-danger" onClick={onDone}>
+                <i className="bi bi-trash pr-1"></i>{cancelButtonHandler}
             </button>
-        </Link>
     </div>
 </form>
 )
 }
+
+export default FormDeck;

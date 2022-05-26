@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function FormCard({
     onSubmit,
     onDone,
-    deckName = "Loading...",
     initialState,
     doneButtonLabel = "Done",
 }) {

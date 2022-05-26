@@ -45,7 +45,7 @@ function DecksRendered() {
                 <div className="card-body">
                     <div className="row justify-content-between px-2">
                         <h5 className="card-title">{deck.name}</h5>
-                        <h6>{deck.cards.length}</h6>
+                        <h6>{deck.cards.length} cards</h6>
                     </div>
                     <p className="row card-text px-2">
                         {deck.description}

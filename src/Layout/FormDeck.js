@@ -29,10 +29,10 @@ function FormDeck({
 return(
 <form onSubmit={handleSubmit}>
     <div className="form-group">
-        <label for="Name"> Deck Name</label>
+        <label htmlFor="Name"> Deck Name</label>
         <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="Name"
             name="name"
             aria-describedby="nameHelp"
@@ -41,7 +41,7 @@ return(
         />
     </div>
     <div className="form-group">
-        <label for="Description">Deck Description</label>
+        <label htmlFor="Description">Deck Description</label>
         <textarea
             rows="4"
             type="text"
